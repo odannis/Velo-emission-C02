@@ -8,12 +8,13 @@ Dernierement, j'ai été surpris par l'émission de C02 d'un cycliste donnée da
 
 La pluplart part de la consommation d'un cycliste mesuré par la science du sport. Un valeur typique, selon l'intensité du cycliste, se situe entre 4 MET et 8 MET. Ou 1 MET (Metabolic equivalent of task) = 1 kcal / (kg * h) correspond à la consommation au repos d'un humain par kilogrammes et heure. [wiki](https://fr.wikipedia.org/wiki/%C3%89quivalent_m%C3%A9tabolique). 
 
-Par exemple, en prenant un MET de 8 pour 30 min de vélo pour quelqu'un de 80 kg, on trouve $ E_{dépensée} = 8 * 80 / 2 = 320 kcal $. J'ai été très surpris par cette valeur qui correspond à manger 1/3 en plus (ref 1800 kcal) après 30 min de vélo. Donc, j'ai décidé d'essayer de retrouver cette valuer avec une description physique d'un homme sur un vélo.
+Par exemple, en prenant un MET de 8 pour 30 min de vélo pour quelqu'un de 80 kg, on trouve $E_{depensee} = 8 * 80 / 2 = 320 kcal$. J'ai été très surpris par cette valeur qui correspond à manger 1/3 en plus (ref 1800 kcal) après 30 min de vélo. Donc, j'ai décidé d'essayer de retrouver cette valuer avec une description physique d'un homme sur un vélo.
 
 ## Description 
+
 Rapidement, je considère la variation d'énergie cinétique, potentiel de pesanteur, travail des forces de frottement de l'air et de la résistance au roulement. Ce qui donne, en supposant la vitesse constante :
 
-$$ E_{tot} = \frac{n_{stop}}{2} m v^2 + m*g*z + R_t v^2 L + C_{rr} m g L $$
+$$E_{tot} = \frac{n_{stop}}{2} m v^2 + m*g*z + R_t v^2 L + C_{rr} m g L$$
 
 ou $n_{stop}$ est le nombre de fois ou on s'arrete lors du trajet, $L$ la longeur du trajet, $R_t$ un coefficient prenant en compte le frottement de l'air, et $C_{rr}$ le coefficient de réssistance au roulement. Plus de détail sur le choix des valeurs dans le code :
 
