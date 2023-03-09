@@ -1,14 +1,14 @@
 # Émission CO2 vélo via la nourriture consommée par le cycliste
 
-Dernierement, j'ai été surpris par l'émission de C02 d'un cycliste donnée dans certaines sources (dont un papier Nature) :
+Dernièrement, j'ai été surpris par l'émission de C02 d'un cycliste donné dans certaines sources (dont un papier Nature) :
 
  - https://www.nature.com/articles/s41598-020-66170-y
  - https://www.auto-moto.com/actualite/environnement/lautomobile-plus-ecolo-que-le-velo-31204.html
  - https://twitter.com/HugoMe/status/1448047429912342531
 
-La pluplart part de la consommation d'un cycliste mesuré par la science du sport. Un valeur typique, selon l'intensité du cycliste, se situe entre 4 MET et 8 MET. Ou 1 MET (Metabolic equivalent of task) = 1 kcal / (kg * h) correspond à la consommation au repos d'un humain par kilogrammes et heure. [wiki](https://fr.wikipedia.org/wiki/%C3%89quivalent_m%C3%A9tabolique). 
+La plupart part de la consommation d'un cycliste mesuré par la science du sport. Une valeur typique, selon l'intensité du cycliste, se situe de 4 à 8 MET. Ou 1 MET (Metabolic equivalent of task) = 1 kcal / (kg * h) correspond à la consommation au repos d'un humain par kilogrammes et heure. [wiki](https://fr.wikipedia.org/wiki/%C3%89quivalent_m%C3%A9tabolique). 
 
-Par exemple, en prenant un MET de 8 pour 30 min de vélo pour quelqu'un de 80 kg, on trouve $E_{depensee} = 8 * 80 / 2 = 320 kcal$. J'ai été très surpris par cette valeur qui correspond à manger 1/3 en plus (ref 1800 kcal) après 30 min de vélo. Donc, j'ai décidé d'essayer de retrouver cette valuer avec une description physique d'un homme sur un vélo.
+Par exemple, en prenant un MET de 8 pour 30 min de vélo pour une personne de 80 kg, on trouve $E_{depensee} = 8 * 80 / 2 = 320 kcal$. J'ai été très surpris par cette valeur qui correspond à manger 1/3 en plus (ref 1800 kcal) après 30 min de vélo. Donc, j'ai décidé de retrouver cette valeur avec une description physique d'un homme sur un vélo.
 
 ## Description 
 
@@ -16,7 +16,7 @@ Rapidement, je considère la variation d'énergie cinétique, potentiel de pesan
 
 $$E_{tot} = \frac{n_{stop}}{2} m v^2 + m g z + R_t v^2 L + C_{rr} m g L$$
 
-ou $n_{stop}$ est le nombre de fois ou on s'arrete lors du trajet, $L$ la longeur du trajet, $R_t$ un coefficient prenant en compte le frottement de l'air, et $C_{rr}$ le coefficient de réssistance au roulement. Plus de détail sur le choix des valeurs dans le code :
+ou $n_{stop}$ est le nombre de fois ou on s'arrete lors du trajet, $L$ la longeur du trajet, $R_t$ un coefficient prenant en compte le frottement de l'air, et $C_{rr}$ le coefficient de résistance au roulement. Plus de détails sur le choix des valeurs dans le code :
 
 ```
 m = 85 # kg masse cycliste + velo
@@ -46,9 +46,12 @@ Ce modèle semble cohérent avec une donnée de https://fr.wikipedia.org/wiki/%C
 
 ![plot](./results/C02_km_linear.png)
 
+Dans cette approche, on considère pour le vélo uniquement les émissions liées à la consommation de nourriture nécessaire à faire avancer le vélo. Pour le scooter, l'ensemble du cycle de vie est considérée (donnée ADEME https://datagir.ademe.fr/apps/mon-impact-transport/).
 
 ## Comparaison des émissions de CO2 en retirant les émissions \n liées au temps de sport recommandé par l'OMS sur le vélo
 L'OMS recommande de faire entre 150-300 minutes de sport à intensité modéré par semaine (https://www.who.int/news-room/fact-sheets/detail/physical-activity). Ce qui nous donne, en moyenne, 225/7 = 32 minutes de sport par jours pour être en bonne santé. En supposant qu'un cycliste ne fait pas de sport en plus que lors de ses déplacements, on peut enlever le C02 correspondant à ses 32 premières minutes de trajet. Donc pour un cycliste roulant à 20km/h, nous obtenons :
 
-
 ![plot](./results/Emmission_C02_distance_avec_sport_OMS_linear.png)
+
+Avec cette approche, on comprend mieux pourquoi l'ADEME a choisi de donner une empreinte carbone nulle au déplacement à vélo (https://datagir.ademe.fr/apps/mon-impact-transport/). Ce qui est valable pour des distances journalières inférieures à environ 10-14 km.
+
