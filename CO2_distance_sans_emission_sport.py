@@ -118,7 +118,7 @@ def plot_all(y_scale = "linear"):
     plt.legend(fontsize=12, loc="upper left")
     plt.title("Comparaison des émissions de CO2 en retirant les émissions \n liées au temps de sport recommandé par l'OMS sur le vélo")
     plt.tight_layout()
-    plt.savefig("results/Emmission_C02_distance_avec_sport_OMS_%s.png"%y_scale, dpi=300)
+    plt.savefig("results/Emmission_C02_distance_avec_sport_OMS_%s.png"%y_scale, dpi=100)
     plt.show()
 
 plot_all(y_scale = "linear")

@@ -53,6 +53,7 @@ L'OMS recommande de faire entre 150-300 minutes de sport à intensité modéré 
 
 ![plot](./results/Emmission_C02_distance_avec_sport_OMS_linear.png)
 
-Plus de détail dans le graphe en [log](./results/Emmission_C02_distance_avec_sport_OMS_log.png)
+Plus de détail dans le graphe en [log](./results/Emmission_C02_distance_avec_sport_OMS_log.png).
+
 Avec cette approche, on comprend mieux pourquoi l'ADEME a choisi de donner une empreinte carbone nulle au déplacement à vélo (https://datagir.ademe.fr/apps/mon-impact-transport/). Ce qui est valable pour des distances journalières inférieures à environ 10-14 km.
 
