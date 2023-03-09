@@ -36,8 +36,17 @@ food_kgC02_kcal_boeuf = 3/1000 # fig 2 de https://www.connaissancedesenergies.or
 E_velo_electrique = 0.4 # Rendement vélo 100% électrique à la louche
 Electricite_kgC02_jool = 0.1 / (1000 * 60 * 60)  # Electricité francaise kgC02/kwh https://app.electricitymaps.com/zone/FR
 ```
+
+## Simulation MET avec ce modèle
+![plot](.results/MET_linear.png)
+
+Il semble y avoir un accord entre ce modèle est une donnée de https://fr.wikipedia.org/wiki/%C3%89quivalent_m%C3%A9tabolique. Avec ce modèle, on obtient un MET de 5 pour 20 km/h. Pour obtenir un MET de 8 à 20 km/h, il faudrait avoir une pente de 1% (soit 100m de dénivelé sur 10km).
+
 ## Comparaison des émissions de CO2 par km pour différents moyens de transport
 
+![plot](.results/C02_km_linear.png)
 
 
-![plot](./result_linear.png)
+## Comparaison des émissions de CO2 en retirant les émissions \n liées au temps de sport recommandé par l'OMS sur le vélo
+
+![plot](.results/Emmission_C02_distance_avec_sport_OMS_linear.png)
