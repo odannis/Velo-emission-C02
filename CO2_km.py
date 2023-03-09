@@ -5,8 +5,7 @@ import seaborn as sns
 
 sns.set_theme(context='talk', style='ticks')
 
-
-m = 75 # kg masse cycliste + velo
+m = 85 # kg masse cycliste + velo
 delta_h = 10 # m dénivelé
 L = 10000 # m distance parcourue
 
@@ -32,20 +31,20 @@ def energie_totale(v, verbose = False):
     E_tot = E_c + E_m + E_t + E_rr # Energie totale
     if verbose:
         print("Vitesse : ", v*3.6, "km/h")
-        print("Energie cinétique : ", E_c/4000, "kcal")
-        print("Energie mécanique : ", E_m/4000, "kcal")
-        print("Energie frottement air : ", E_t/4000, "kcal")
-        print("ENergie frottement roulement : ", E_rr/4000, "kcal")
-        print(f"Energie totale  : {E_tot/4000:.2f} kcal ")
+        print("Energie cinétique : ", E_c/4184, "kcal")
+        print("Energie mécanique : ", E_m/4184, "kcal")
+        print("Energie frottement air : ", E_t/4184, "kcal")
+        print("ENergie frottement roulement : ", E_rr/4184, "kcal")
+        print(f"Energie totale  : {E_tot/4184:.2f} kcal ")
         print(f"Puissance instant : {E_tot*v/L:.2f} W")
         print()
     return E_tot
 
 def C02_from_energie(E_tot, food_kgC02_kcal, verbose = False):
-    kg_C02_bike_human = E_tot/4000 * 1/E_eff * food_kgC02_kcal
+    kg_C02_bike_human = E_tot/4184 * 1/E_eff * food_kgC02_kcal
     kg_C02_bike_electrique = E_tot/E_velo_electrique * Electricite_kgC02_jool
     if verbose:
-        print(f"Energie nourriture  : {E_tot/4000 * 1/E_eff:.2f} kcal = {kg_C02_bike_human:.2f} kg CO2")
+        print(f"Energie nourriture  : {E_tot/4184 * 1/E_eff:.2f} kcal = {kg_C02_bike_human:.2f} kg CO2")
         print(f"Trajet en vélo electrique : {E_tot/E_velo_electrique/1000 * 1/(60*60):.2f} kWh")
         print(f"Trajet en vélo electrique : {kg_C02_bike_electrique:.3f} kg CO2")
         print()
@@ -106,7 +105,7 @@ def plot_all(y_scale = "linear"):
     plt.title("Comparaison des émissions de CO2 par km pour différents moyens de transport", fontsize=14)
     plt.legend(fontsize=12, loc="upper left")
     plt.tight_layout()
-    plt.savefig("result_%s.png"%y_scale, dpi=500)
+    plt.savefig("results/C02_km_%s.png"%y_scale, dpi=500)
     plt.show()
 
 plot_all(y_scale = "linear")
