@@ -48,7 +48,7 @@ Ce modèle semble cohérent avec une donnée de https://fr.wikipedia.org/wiki/%C
 
 Dans cette approche, on considère pour le vélo uniquement les émissions liées à la consommation de nourriture nécessaire à faire avancer le vélo. Pour le scooter et le métro, l'ensemble du cycle de vie est considérée (donnée ADEME https://datagir.ademe.fr/apps/mon-impact-transport/). Avec cette approche, le métro et le vélo 100% électrique (sans aucun éffort du cycliste) sont très proches et imbatable ! Plus de détail dans le graphe en [log](./results/C02_km_log.png)
 
-## Comparaison des émissions de CO2 en retirant les émissions \n liées au temps de sport recommandé par l'OMS sur le vélo
+## Comparaison des émissions de CO2 en retirant les émissions liées au temps de sport recommandé par l'OMS sur le vélo
 L'OMS recommande de faire entre 150-300 minutes de sport à intensité modéré par semaine (https://www.who.int/news-room/fact-sheets/detail/physical-activity). Ce qui nous donne, en moyenne, 225/7 = 32 minutes de sport par jours pour être en bonne santé. En supposant qu'un cycliste ne fait pas de sport en plus que lors de ses déplacements, on peut enlever le C02 correspondant à ses 32 premières minutes de trajet. Donc pour un cycliste roulant à 20km/h, nous obtenons :
 
 ![plot](./results/Emmission_C02_distance_avec_sport_OMS_linear.png)
