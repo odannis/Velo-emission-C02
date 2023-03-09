@@ -40,7 +40,7 @@ Electricite_kgC02_jool = 0.1 / (1000 * 60 * 60)  # Electricité francaise kgC02/
 ## Simulation MET avec ce modèle
 ![plot](./results/MET_linear.png)
 
-Ce modèle semble cohérent avec une donnée de https://fr.wikipedia.org/wiki/%C3%89quivalent_m%C3%A9tabolique. Avec celui, on obtient un MET de 5 pour 20 km/h. Pour obtenir un MET de 8 à 20 km/h, il faudrait avoir une pente de 1% (soit 100m de dénivelé sur 10km).
+Ce modèle semble cohérent avec une donnée de https://fr.wikipedia.org/wiki/%C3%89quivalent_m%C3%A9tabolique. Avec celui-ci, on obtient un MET de 5 pour 20 km/h. Pour obtenir un MET de 8 à 20 km/h, il faudrait avoir une pente de 1% (soit 100m de dénivelé sur 10km).
 
 ## Comparaison des émissions de CO2 par km pour différents moyens de transport
 
