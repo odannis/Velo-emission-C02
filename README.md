@@ -10,6 +10,7 @@ La plupart part de la consommation d'un cycliste mesuré par la science du sport
 
 Par exemple, en prenant un MET de 8 pour 30 min de vélo pour une personne de 80 kg, on trouve $E_{depensee} = 8 * 80 / 2 = 320 kcal$. J'ai été très surpris par cette valeur qui correspond à manger 1/3 en plus (ref 1800 kcal) après 30 min de vélo. Donc, j'ai décidé de retrouver cette valeur avec une description physique d'un homme sur un vélo.
 
+
 ## Description 
 
 Rapidement, je considère la variation d'énergie cinétique, potentiel de pesanteur, travail des forces de frottement de l'air et de la résistance au roulement. Ce qui donne, en supposant la vitesse constante :
