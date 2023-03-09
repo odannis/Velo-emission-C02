@@ -40,7 +40,7 @@ Electricite_kgC02_jool = 0.1 / (1000 * 60 * 60)  # Electricité francaise kgC02/
 ## Simulation MET avec ce modèle
 ![plot](./results/MET_linear.png)
 
-Il semble y avoir un accord entre ce modèle est une donnée de https://fr.wikipedia.org/wiki/%C3%89quivalent_m%C3%A9tabolique. Avec ce modèle, on obtient un MET de 5 pour 20 km/h. Pour obtenir un MET de 8 à 20 km/h, il faudrait avoir une pente de 1% (soit 100m de dénivelé sur 10km).
+Ce modèle semble cohérent avec une donnée de https://fr.wikipedia.org/wiki/%C3%89quivalent_m%C3%A9tabolique. Avec celui, on obtient un MET de 5 pour 20 km/h. Pour obtenir un MET de 8 à 20 km/h, il faudrait avoir une pente de 1% (soit 100m de dénivelé sur 10km).
 
 ## Comparaison des émissions de CO2 par km pour différents moyens de transport
 
@@ -48,5 +48,7 @@ Il semble y avoir un accord entre ce modèle est une donnée de https://fr.wikip
 
 
 ## Comparaison des émissions de CO2 en retirant les émissions \n liées au temps de sport recommandé par l'OMS sur le vélo
+L'OMS recommande de faire entre 150-300 minutes de sport à intensité modéré par semaine (https://www.who.int/news-room/fact-sheets/detail/physical-activity). Ce qui nous donne, en moyenne, 225/7 = 32 minutes de sport par jours pour être en bonne santé. En supposant qu'un cycliste ne fait pas de sport en plus que lors de ses déplacements, on peut enlever le C02 correspondant à ses 32 premières minutes de trajet. Donc pour un cycliste roulant à 20km/h, nous obtenons :
+
 
 ![plot](./results/Emmission_C02_distance_avec_sport_OMS_linear.png)

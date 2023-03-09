@@ -78,13 +78,13 @@ l_kg_metro = 0.003 * l_L_km
 
 def plot_all(y_scale = "linear"):
     fig, ax = plt.subplots(figsize=(10, 5))
-    #plt.plot(l_L_km, l_kg_auto , "--", label = "Voiture")
-    plt.plot(l_L_km, l_kg_moto, "--", label = "Scooter")
+    #plt.plot(l_L_km, l_kg_auto , label = "Voiture")
+    plt.plot(l_L_km, l_kg_moto, label = "Scooter")
     plt.plot(l_L_km, l_kg_C02_bike_human, label = "Cycliste français moyen")
     plt.plot(l_L_km, l_kg_C02_bike_human_vegan, label = "Cycliste vegan")
     plt.plot(l_L_km, l_kg_C02_bike_human_boeuf, label = "Cycliste carnivore")
     plt.plot(l_L_km, l_kg_C02_bike_electrique, label = "Vélo 100% électrique")
-    plt.plot(l_L_km, l_kg_metro, "--", label = "Metro")
+    plt.plot(l_L_km, l_kg_metro, label = "Metro")
     plt.xlabel("Distance (km)")
     plt.ylabel("kg CO2")
     plt.yscale(y_scale)
