@@ -14,7 +14,7 @@ Par exemple, en prenant un MET de 8 pour 30 min de vélo pour quelqu'un de 80 kg
 
 Rapidement, je considère la variation d'énergie cinétique, potentiel de pesanteur, travail des forces de frottement de l'air et de la résistance au roulement. Ce qui donne, en supposant la vitesse constante :
 
-$$E_{tot} = \frac{n_{stop}}{2} m v^2 $$
+$$E_{tot} = \frac{n_{stop}}{2} m v^2 + m g z + R_t v^2 L + C_{rr} m g L$$
 
 ou $n_{stop}$ est le nombre de fois ou on s'arrete lors du trajet, $L$ la longeur du trajet, $R_t$ un coefficient prenant en compte le frottement de l'air, et $C_{rr}$ le coefficient de réssistance au roulement. Plus de détail sur le choix des valeurs dans le code :
 
