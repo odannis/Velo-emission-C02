@@ -105,7 +105,7 @@ def plot_all(y_scale = "linear"):
     plt.title("Comparaison des émissions de CO2 par km pour différents moyens de transport", fontsize=14)
     plt.legend(fontsize=12, loc="upper left")
     plt.tight_layout()
-    plt.savefig("results/C02_km_%s.png"%y_scale, dpi=500)
+    plt.savefig("results/C02_km_%s.png"%y_scale, dpi=300)
     plt.show()
 
 plot_all(y_scale = "linear")
